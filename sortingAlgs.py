@@ -5,7 +5,7 @@ from bubbleSort import bubble_sort
 from quickSort import quick_sort
 from mergeSort import merge_sort
 from insertionSort import insertion_sort
-
+from shellSort import shell_sort
 root = Tk()
 root.title('Sorting Algorithm Visualizer')
 root.maxsize(900, 600)
@@ -62,6 +62,9 @@ def startAlgorithm():
     elif algMenu.get() == 'Insertion Sort':
         insertion_sort(data, drawData, speedScale.get())
 
+    elif algMenu.get() == 'Shell Sort':
+        insertion_sort(data, drawData, speedScale.get())
+
     elif algMenu.get() == 'Merge Sort':
         merge_sort(data, drawData, speedScale.get())
 
@@ -77,7 +80,7 @@ canvas.grid(row=1, column=0, padx=10, pady=5)
 #User Interface Area
 #Row[0]
 Label(UI_frame, text="Algorithm: ", bg='grey').grid(row=0, column=0, padx=5, pady=5, sticky=W)
-algMenu = ttk.Combobox(UI_frame, textvariable=selected_alg, values=['Bubble Sort', 'Merge Sort', 'Quick Sort','Insertion Sort'])
+algMenu = ttk.Combobox(UI_frame, textvariable=selected_alg, values=['Bubble Sort', 'Merge Sort', 'Quick Sort','Insertion Sort','Shell Sort'])
 algMenu.grid(row=0, column=1, padx=5, pady=5)
 algMenu.current(0)
 
